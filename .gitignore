@@ -1,0 +1,11 @@
+build/
+build-*/
+.tools/
+.vs/
+*.exe
+*.obj
+*.o
+*.pdb
+*.log
+trajectory.csv
+recording.json
