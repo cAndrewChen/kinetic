@@ -1,13 +1,14 @@
-// Your implementation goes here. Read the contract, predict a result, then write it yourself.
+#pragma once
+
 #include <stdexcept>
 #include <cmath>
 #include <algorithm>
 
 namespace kinetic {
     struct Vec3 {
-        double x;
-        double y;
-        double z;
+        double x{};
+        double y{};
+        double z{};
 
         Vec3 operator+(const Vec3& other) const {
             return Vec3{x + other.x, y + other.y, z + other.z};
@@ -77,7 +78,7 @@ namespace kinetic {
 
         Vec3 normalized() const {
             const double len = length();
-            if (length() <= 1e-12) {
+            if (len <= 1e-12) {
                 return Vec3{};
             }
             return Vec3{x / len, y / len, z / len};

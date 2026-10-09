@@ -9,3 +9,4 @@ build-*/
 *.log
 trajectory.csv
 recording.json
+out/

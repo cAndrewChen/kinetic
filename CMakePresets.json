@@ -3,23 +3,21 @@
     "configurePresets": [
         {
             "name": "kinetic",
-            "displayName": "Visual Studio Build Tools 2026 Release - x86",
-            "description": "Using compilers for Visual Studio 18 2026 (x86 architecture)",
+            "displayName": "Visual Studio Build Tools 2026 - x64",
+            "description": "Using compilers for Visual Studio 18 2026 (x64 architecture)",
             "generator": "Visual Studio 18 2026",
-            "toolset": "host=x86",
-            "architecture": "win32",
+            "toolset": "host=x64",
+            "architecture": "x64",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe"
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
             }
         }
     ],
     "buildPresets": [
         {
             "name": "kinetic-debug",
-            "displayName": "Visual Studio Build Tools 2026 Release - x86 - Debug",
+            "displayName": "Visual Studio Build Tools 2026 - x64 - Debug",
             "configurePreset": "kinetic",
             "configuration": "Debug"
         }
